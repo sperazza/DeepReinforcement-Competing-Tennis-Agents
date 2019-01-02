@@ -1,3 +1,15 @@
+# tennis specific
+/Tennis_Windows_x86_64
+Tennis_Windows_x86_64.zip
+Soccer.ipynb
+/.vscode
+/.idea
+Crawler.ipynb
+Reacher_Windows_x86_64.zip
+unity-environment.log
+/__pycache__
+/.ipynb_checkpoints
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
