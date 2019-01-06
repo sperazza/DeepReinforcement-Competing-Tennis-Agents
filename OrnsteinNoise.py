@@ -25,13 +25,3 @@ class OUNoise:
         dx = self.theta * (self.mu - x) + self.sigma * np.array([random.random() for i in range(len(x))])
         self.state = x + dx
         return self.state
-
-
-if __name__ == "__main__":
-    noise=OUNoise(8, 123, sigma=0.9)
-    #noise.theta=5
-    sample=noise.sample()
-    print(sample)
-    x=[.1,.2,.5,.9,-.1,-.2,-.5,-.9]
-    print(x+x*sample)
-

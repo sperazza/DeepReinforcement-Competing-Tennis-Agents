@@ -14,7 +14,7 @@ def hidden_init(layer):
 class Actor(nn.Module):
     """Actor (Policy) Model."""
 
-    def __init__(self, pred_state_size, state_size, action_size, seed, fc1_units=300, fc2_units=200):
+    def __init__(self, pred_state_size, state_size, action_size, seed, fc1_units=600, fc2_units=300):
         """Initialize parameters and build model.
         Params
         ======
@@ -28,9 +28,9 @@ class Actor(nn.Module):
         self.seed = torch.manual_seed(seed)
         self.fc1 = nn.Linear(pred_state_size + state_size, fc1_units)
         self.do1 = nn.Dropout(.2)
-        self.bn1 = nn.BatchNorm1d(fc1_units)
+        self.bn1 = nn.LayerNorm(fc1_units)
         self.fc2 = nn.Linear(fc1_units, fc2_units)
-        self.bn2 = nn.BatchNorm1d(fc2_units)
+        self.bn2 = nn.LayerNorm(fc2_units)
         self.fc5 = nn.Linear(fc2_units, action_size)
         self.reset_parameters()
 
@@ -43,23 +43,19 @@ class Actor(nn.Module):
         """Build an actor (policy) network that maps states -> actions."""
 
         pred_state = state - prev_state
-        print("state shape",state.shape)
-        print("prev_state shape",prev_state.shape)
-        print("pred_state shape",pred_state.shape)
-        #pred_state = state + (state - prev_state)
-        xs = torch.cat((pred_state, state), dim=1)
-        print("xs shape",xs.shape)
+        if len(state.shape) == 2:
+            dual_states = torch.cat((pred_state, state), dim=1)
+        else:
+            dual_states = torch.cat((pred_state, state))
 
-        x = self.fc1(xs)
-        x = self.bn1(x)
-        x = F.tanh(x)
-        x = self.do1(x)
+        xs = self.fc1(dual_states)
+        xs = self.bn1(xs)
+        xf = F.tanh(xs)
+        xg = self.do1(xf)
+        xh = self.fc2(xg)
+        xh = self.bn2(xh)
+        xj = F.tanh(xh)
+        xk = self.fc5(xj)
+        xl = F.tanh(xk)
 
-        x = self.fc2(x)
-        x = self.bn2(x)
-        x = F.tanh(x)
-
-        x = self.fc5(x)
-        x = F.tanh(x)
-
-        return x
+        return xl
