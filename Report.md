@@ -24,23 +24,24 @@
 - The implementation was trained with several different architecture configurations.
 - It trains relatively fast, reaching a target mark of .5 average score, in only  **247 episodes**.
 - An architecture consisting of state and previous state subtraction, had a small number of iterations needed to maintain a  > 0.5 score
-<div style="width:500px">![ddpgScore]
+
+![ddpgScore]
 
  *Fig 1. Training Progress of mean score vs epochs using prev_state-state*
  # 
 - One of the architectures utilizing a one-hot vector of states, demonstrated relative stability, had small dips, but consistently improved the score over time
 
-     <div style="width:400px">![trainScore]
+![trainScore]
      *Fig 2. Training Progress of mean score vs epochs using one-hot state vector*
-     # 
+# 
      
      
 - A run of a fully trained network, without noise or further training, achieves 2.65 average score
 
-     ![assets\scoregraph]
+![trainedscore]
      
      *Fig 3. Training Progress of trained network*
-     # 
+# 
 
 
 # 
