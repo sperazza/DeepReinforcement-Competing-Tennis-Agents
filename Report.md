@@ -32,13 +32,15 @@
 - One of the architectures utilizing a one-hot vector of states, demonstrated relative stability, had small dips, but consistently improved the score over time
 
 ![trainScore]
+
      *Fig 2. Training Progress of mean score vs epochs using one-hot state vector*
+     
 # 
      
      
 - A run of a fully trained network, without noise or further training, achieves 2.65 average score
 
-![trainedscore]
+![trainedScore]
      
      *Fig 3. Training Progress of trained network*
 # 
@@ -61,7 +63,7 @@ The project is implemented in utilizing a python notebook, Tennis.ipynb.
 
 This project uses the Multi Agent Deep Deterministic Policy Gradient (MADDPG) Reinforcement Learning algorithm.  This consists of two interacting agents with an inverse reward function sharing a single brain and sharing a single replay buffer.  This is a type of adversarial self-play, where each agent becomes increasingly skilled at the game, and has an opponent of equal skill (itself). This is a similar strategy to that of Google's AlphaGo. 
 
-<div style="width:500px">![MADDPG]
+![MADDPG]
 
 *Fig 4. Multi Agent Deep Deterministic Policy Gradient structure*
 
@@ -69,7 +71,7 @@ This project uses the Multi Agent Deep Deterministic Policy Gradient (MADDPG) Re
 
 A modification that was helpful in reducing the number of training epochs was to slightly modify the current state, by subtracting the previous state.
 
-<div style="width:500px">![MADDPG2]
+![MADDPG2]
 
 *Fig 5. MADDPG Modification*
 
@@ -194,11 +196,11 @@ This implementation trains relatively fast, reaching a target mark of .5 average
 
 Below is average training score as well as raw training scores(with training noise)
 
-<div style="width:500px">![trainScore]
+![trainScore]
     
 *Fig 7. Training progress vs epoch
 #  
-<div style="width:500px">![trainedrawscore]
+![trainedrawscore]
     
 *Fig 8. Trained results vs runs*
 #  
