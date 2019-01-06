@@ -1,13 +1,4 @@
-<style type="text/css">
-    .classname{
-        width: 100px;
-    }
-</style>
 
-## Deep Reinforcment Learning - Collaboration and Competition
-
-##### for Udacity Deep Reinforcment Learning Nanodegree
-###### Andrew R Sperazza
 [trained_image]: assets/reacher_trained_fast_rnd.gif
 [trainScore]: assets/scoregraph.png
 [ddpgScore]: assets/ddpgscores.png
@@ -16,6 +7,12 @@
 [trainingRawScore]: assets/TrainingRawScore.png
 [MADDPG]: assets/maddpg.png
 [MADDPG2]: assets/maddpg2.png
+
+## Deep Reinforcment Learning - Collaboration and Competition
+
+##### for Udacity Deep Reinforcment Learning Nanodegree
+###### Andrew R Sperazza
+
 # 
 
  
