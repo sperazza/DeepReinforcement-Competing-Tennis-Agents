@@ -210,23 +210,16 @@ Below is average training score as well as raw training scores(with training noi
 Sample output of training steps:
 ```
 
-Episode 1, Average Score: 1.77, Std Dev: 1.07, Eps: 0.99, gam: 0.94
-Episode 2, Average Score: 2.20, Std Dev: 0.84, Eps: 0.99, gam: 0.94
-Episode 3, Average Score: 3.27, Std Dev: 1.59, Eps: 0.98, gam: 0.94
-Episode 4, Average Score: 3.99, Std Dev: 2.83, Eps: 0.98, gam: 0.94
-Episode 5, Average Score: 4.76, Std Dev: 3.02, Eps: 0.98, gam: 0.94
-Episode 6, Average Score: 5.47, Std Dev: 1.67, Eps: 0.98, gam: 0.95
+         Episode 1, Average Score: -0.00, Std Dev: 0.00, Eps: 0.99, gam: 0.95
+         Episode 2, Average Score: -0.00, Std Dev: 0.00, Eps: 0.99, gam: 0.95
+         Episode 3, Average Score: -0.00, Std Dev: 0.00, Eps: 0.99, gam: 0.95
 
 ...
 
-Episode 40, Average Score: 29.78, Std Dev: 2.26, Eps: 0.91, gam: 0.98
-Episode 41, Average Score: 29.88, Std Dev: 3.94, Eps: 0.91, gam: 0.98
-Episode 42, Average Score: 30.01, Std Dev: 4.42, Eps: 0.91, gam: 0.98
-Environment solved in 42 episodes!	Average Score: 30.01
-Episode 43, Average Score: 30.13, Std Dev: 2.37, Eps: 0.91, gam: 0.98
-Episode 44, Average Score: 30.27, Std Dev: 1.43, Eps: 0.91, gam: 0.98
-Episode 45, Average Score: 30.42, Std Dev: 2.15, Eps: 0.90, gam: 0.98
-Episode 46, Average Score: 30.58, Std Dev: 1.58, Eps: 0.90, gam: 0.98
+         *solved* Episode 669, Average Score: 1.09, Std Dev: 0.00, Eps: 0.87, gam: 0.99
+         *solved* Episode 670, Average Score: 1.08, Std Dev: 0.06, Eps: 0.87, gam: 0.99
+         *solved* Episode 671, Average Score: 1.10, Std Dev: 0.00, Eps: 0.87, gam: 0.99
+         opt saved
 ...
 
 ```
