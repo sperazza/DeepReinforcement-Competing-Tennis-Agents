@@ -40,10 +40,6 @@
      
 - A run of a fully trained network, without noise or further training, achieves 2.65 average score
 
-![trainedScore]
-     
-     *Fig 3. Training Progress of trained network*
-# 
 
 
 # 
